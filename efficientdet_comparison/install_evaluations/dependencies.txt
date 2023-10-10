@@ -1,0 +1,8 @@
+torch
+torchvision
+pycocotools
+webcolors
+PyYAML
+opencv-python
+gdown
+pandas
