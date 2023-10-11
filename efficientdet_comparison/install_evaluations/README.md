@@ -10,6 +10,17 @@
 
 	bash -i setup.sh
 
+# Run video demo 
+
+1- Navigate to the root folder of nanotracker
+
+2- Activate the installed environment and run demo by giving mp4 video path
+
+    source ~/.bashrc
+    source activate ~/venv_p39_nanotracker
+    python video_demo.py --video_path {path_to_mp4_file}
+
+3- Output will be saved in root folder with name "./out_{filename}.mp4"
 
 # Run evaluations
 
@@ -20,11 +31,13 @@
     cd efficientdet_comparison/Yet-Another-EfficientDet-Pytorch
 
 2- Activate the installed environment and run evaluation
+
     source ~/.bashrc
     source activate ~/venv_p39_nanotracker
     python coco_eval.py -p wider -c 0 -w ./weights/efficientdet-d0.pth
 
 Note: For evaluation on cuda disabled platform:
+
     python coco_eval.py -p wider -c 0 -w ./weights/efficientdet-d0.pth --cuda False
 
 ## Evaluating Our Quantized NanoTracker model with Wider Person Validation Dataset
@@ -32,6 +45,7 @@ Note: For evaluation on cuda disabled platform:
 1- Navigate to the root folder of nanotracker
 
 2- Activate the installed environment and run evaluation
+
     source ~/.bashrc
     source activate ~/venv_p39_nanotracker
     python coco_eval.py -m qat -dp ./datasets/wider/val -ap ./datasets/wider/annotations/instances_val.json -wp ./efficientdet_comparison/training_experiment_best.pth.tar
