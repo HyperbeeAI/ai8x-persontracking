@@ -15,7 +15,8 @@ change compound_coef
 """
 
 import json
-import os
+import os, sys
+sys.path.append('..') # to get models, library and dataloader
 import numpy as np
 
 import argparse
