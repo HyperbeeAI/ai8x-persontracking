@@ -14,7 +14,7 @@ CONDA_PATH=$(which conda)
 export PATH="$(dirname $CONDA_PATH)/../bin:$PATH"
 source ~/.bashrc
 conda create -y -k --prefix ./venv_p39_nanotracker python=3.9
-source activate ./venv_p39_nanotracker/
+conda activate ./venv_p39_nanotracker/
 
 # Install required libraries
 pip install -r dependencies.txt
